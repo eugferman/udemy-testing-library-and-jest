@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import App from './App';
+import App, { replaceCamelWithSpaces } from './App';
 
 // nos chequea que en el componente <App /> hay un texto que dice learn react
 test('renders learn react link', () => {
@@ -46,4 +46,18 @@ test('initial conditions', () => {
   // check that the checkbox starts out unchecked
   const checkbox = screen.getByRole('checkbox', { name: 'App Checkbox' });
   expect(checkbox).not.toBeChecked();
+});
+
+describe('test replace camel with spaces', () => {
+  test('Works for no inner capital letters', () => {
+    expect(replaceCamelWithSpaces('Red')).toBe('Red');
+  });
+
+  test('Works for one  inner capital letters', () => {
+    expect(replaceCamelWithSpaces('MidnightBlue')).toBe('Midnight Blue');
+  });
+
+  test('Works for multiple inner capital letters', () => {
+    expect(replaceCamelWithSpaces('MediumVioletRed')).toBe('Medium Violet Red');
+  });
 });

@@ -5,6 +5,10 @@ import Button from './components/Button';
 import Quiz21 from './quiz/Quiz21';
 import Quiz22 from './quiz/Quiz22';
 
+export function replaceCamelWithSpaces(colorName) {
+  return colorName.replace(/\B([A-Z]\B)/g, ' $1');
+};
+
 function App() {
   return (
     <div className="App">
