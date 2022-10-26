@@ -2,12 +2,12 @@ import logo from './logo.svg';
 import './App.css';
 
 import Button from './components/Button';
+import Quiz21 from './quiz/Quiz21';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
@@ -20,8 +20,9 @@ function App() {
           Learn React
         </a>
         <button>Test button</button>
-        <input type="checkbox" />
+        <input type="checkbox" data-testid="app-checkbox"/>
         <Button />
+        <Quiz21 />
       </header>
     </div>
   );
