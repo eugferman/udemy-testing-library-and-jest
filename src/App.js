@@ -3,6 +3,7 @@ import './App.css';
 
 import Button from './components/Button';
 import Quiz21 from './quiz/Quiz21';
+import Quiz22 from './quiz/Quiz22';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <label htmlFor="app-checkbox">App Checkbox</label>
         <Button />
         <Quiz21 />
+        <Quiz22 />
       </header>
     </div>
   );
