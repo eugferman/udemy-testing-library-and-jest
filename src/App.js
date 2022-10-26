@@ -20,7 +20,8 @@ function App() {
           Learn React
         </a>
         <button>Test button</button>
-        <input type="checkbox" data-testid="app-checkbox"/>
+        <input type="checkbox" id="app-checkbox"/>
+        <label htmlFor="app-checkbox">App Checkbox</label>
         <Button />
         <Quiz21 />
       </header>
