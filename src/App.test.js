@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import App, { replaceCamelWithSpaces } from './App';
+import App from './App';
 
 // nos chequea que en el componente <App /> hay un texto que dice learn react
 test('renders learn react link', () => {

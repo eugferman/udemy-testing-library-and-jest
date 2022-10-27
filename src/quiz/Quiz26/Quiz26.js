@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import styled from 'styled-components';
+import React, { useState } from "react";
+import styled from "styled-components";
 
 const ContainerQuiz = styled.div`
   display: flex;
@@ -30,37 +30,41 @@ const ActionButton = styled.button`
   :hover {
     cursor: pointer;
   }
-  :disabled{
+  :disabled {
     cursor: inherit;
-    background-color: ${(props) => props.backgroundColor}
+    background-color: ${(props) => props.backgroundColor};
   }
 `;
 
 export function replaceCamelWithSpaces(colorName) {
-  return colorName.replace(/\B([A-Z]\B)/g, ' $1');
-};
+  return colorName.replace(/\B([A-Z]\B)/g, " $1");
+}
 
 const Quiz26 = () => {
   // const [enableButton, setEnableButton] = useState(false);
-  const [buttonColor, setButtonColor] = useState('MediumVioletRed');
-  const textButton = buttonColor === "MediumVioletRed" ? 'Midnight Blue' : 'Medium Violet Red';
-  const newButtonColor = buttonColor === "MediumVioletRed" ? "MidnightBlue" : "MediumVioletRed";
+  const [buttonColor, setButtonColor] = useState("MediumVioletRed");
+  const textButton =
+    buttonColor === "MediumVioletRed" ? "Midnight Blue" : "Medium Violet Red";
+  const newButtonColor =
+    buttonColor === "MediumVioletRed" ? "MidnightBlue" : "MediumVioletRed";
 
-  return <>
-  <ContainerQuiz>
-    <TitleQuiz>Quiz 26</TitleQuiz>
-      {/*<label>
+  return (
+    <>
+      <ContainerQuiz>
+        <TitleQuiz>Quiz 26</TitleQuiz>
+        {/*<label>
         <input data-testid="quiz26" type="checkbox"onClick={(e) => setEnableButton(e.target.checked)} />
         {textCheckbox}
       </label>*/}
-      <ActionButton 
-        backgroundColor={buttonColor} 
-        onClick={() => setButtonColor(newButtonColor)}
-      >
-        Change to {replaceCamelWithSpaces(textButton)}
-      </ActionButton>
-  </ContainerQuiz>
-  </>
-}
+        <ActionButton
+          backgroundColor={buttonColor}
+          onClick={() => setButtonColor(newButtonColor)}
+        >
+          Change to {replaceCamelWithSpaces(textButton)}
+        </ActionButton>
+      </ContainerQuiz>
+    </>
+  );
+};
 
 export default Quiz26;

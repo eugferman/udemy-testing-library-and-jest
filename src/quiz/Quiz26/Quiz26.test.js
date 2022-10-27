@@ -5,7 +5,7 @@ test('change background color of button', () => {
   render(<Quiz26 />);
   const button = screen.getByRole('button');
 
-  expect(button.textContent).toBe('Change to Midnight Blue');
+  expect(button).toHaveTextContent('Change to Midnight Blue');
   
   // 'initial background color
   expect(button).toHaveStyle({ backgroundColor: "MediumVioletRed" });
@@ -14,7 +14,7 @@ test('change background color of button', () => {
   fireEvent.click(button);
   expect(button).toHaveStyle({ backgroundColor: "MidnightBlue" });
 
-  expect(button.textContent).toBe('Change to Medium Violet Red');
+  expect(button).toHaveTextContent('Change to Medium Violet Red');
 
   // click button to change background color of button
   fireEvent.click(button);
