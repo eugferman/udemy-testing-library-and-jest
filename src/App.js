@@ -1,13 +1,10 @@
-import logo from './logo.svg';
+
 import './App.css';
 
 import Button from './components/Button';
 import Quiz21 from './quiz/Quiz21';
 import Quiz22 from './quiz/Quiz22';
-
-export function replaceCamelWithSpaces(colorName) {
-  return colorName.replace(/\B([A-Z]\B)/g, ' $1');
-};
+import Quiz26 from './quiz/Quiz26';
 
 function App() {
   return (
@@ -30,6 +27,7 @@ function App() {
         <Button />
         <Quiz21 />
         <Quiz22 />
+        <Quiz26 />
       </header>
     </div>
   );
